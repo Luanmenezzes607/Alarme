@@ -1,0 +1,72 @@
+body{
+    background-color: rgba(0, 0, 0, 0.892);
+    color: #fff;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+    height: 25%;
+    width: 100%;
+    background-image: url('../assets/mountains3.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    color:  rgb(50, 117, 99);
+}
+
+.container{
+    margin-top: 10px;
+    padding: 20px;
+    height: calc(100vh - 25% - 170px);
+    overflow-y: scroll;
+}
+
+.container audio{
+    margin-top: 12px;
+}
+
+.hours{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.hours input{
+    background-color: rgb(50, 117, 99);
+    padding: 10px 30px;
+    font-size: 30px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+.music-select{
+    background-color: rgb(50, 117, 99);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+footer{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+footer button{
+    background-color: rgb(50, 117, 99);
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    color:#fff;
+}
