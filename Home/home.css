@@ -11,22 +11,22 @@ header{
     padding: 0px 50px;
     height: 25%;
     width: 100%;
-    position: relative;
     background-image: url('../assets/mountains.jpg');
     background-size: cover;
     background-position: center bottom;
 }
 
-header button{
+footer button{
     position: absolute;
-    right: 7%;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    bottom: -21px;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border: none;
     cursor: pointer;
+    font-size: 22px;
 }
 
 .container{
@@ -57,13 +57,12 @@ header button{
 }
 
 footer{
-    background-color: rgb(50, 117, 99);
+    background-color: rgba(0, 0, 0, 0.892);
     height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
 }
 
 .alarme, .conometro{
