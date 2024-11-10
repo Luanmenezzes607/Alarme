@@ -35,6 +35,7 @@ header{
     border: none;
     outline: none;
     border-radius: 40px;
+    text-align: center;
 }
 
 .music-select{
