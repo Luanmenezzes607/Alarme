@@ -1,7 +1,12 @@
 body{
+    height: 100vh;
+}
+
+.page1{
     background-color: rgba(0, 0, 0, 0.892);
     color: #fff;
-    height: 100vh;
+    height: 100%;
+    display: block;
 }
 
 header{
@@ -16,19 +21,6 @@ header{
     background-position: center bottom;
 }
 
-footer button{
-    position: absolute;
-    left: 50%;
-    bottom: 15px;
-    transform: translatex(-50%);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    border: none;
-    cursor: pointer;
-    font-size: 22px;
-}
-
 .container{
     padding: 20px;
     height: calc(100vh - 25% - 60px);
@@ -41,10 +33,17 @@ footer button{
 
 .hours{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff48;
+    flex-direction: column;
     padding: 30px;
+    gap: 20px;
+}
+
+.info-hours{
+    background-color: #ffffff48;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 20px;
 }
 
 .info-hours p{
@@ -56,15 +55,6 @@ footer button{
     margin-right: 5px;
 }
 
-footer{
-    background-color: rgba(0, 0, 0, 0.892);
-    height: 60px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .alarme, .conometro{
     background-color: rgb(50, 117, 99);
     display: flex;
@@ -74,4 +64,27 @@ footer{
     height: 100%;
     width: 50%;
     cursor: pointer;
+}
+
+.footer-page1{
+    background-color: rgba(0, 0, 0, 0.892);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;position: relative;
+}
+
+
+.footer-page1 button{
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translatex(-50%);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
 }
