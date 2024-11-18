@@ -43,27 +43,29 @@ btnAdTime.addEventListener('click', adicionarAlarme)
 
 function adicionarAlarme(){
     alarmes.push({
-        time: inputTime.value,
-        icon: `<i class="fa-solid fa-toggle-off active-alarme"></i>`
+        input: inputTime.value,
+        active: true
     })
 
     page2.style.display = 'none'
     page1.style.display = 'block'
     showTime()
-
 }
 
 function showTime(){
     let newTime = ''
-
-    alarmes.map((item, index)=>{
-        newTime += `
-              <li class="info-hours">
-                   <p><span>AM </span>${item.time}H</p>
-                   ${item.icon}
-              </li>
-        `
-    })
+        alarmes.forEach((item)=>{
+            newTime += `
+                  <div class="info-hours">
+                     <p><span>AM </span>${item.input}H</p>
+                    <div class="container-active">
+                        <div class="box">
+                        <div class="circle"></div>
+                        </div>
+                    </div>
+                  </div>
+            `
+        })
 
     document.querySelector('.hours').innerHTML= newTime
     localStorage.setItem('alarmes', JSON.stringify(alarmes))
@@ -74,22 +76,39 @@ function getInfos(){
 
     if(hours){
         alarmes = JSON.parse(hours)
+        showTime()
     }
 
-    showTime()
 }
 
 
 /*====================================================================*/
-function ativarAlarme(index){
-    console.log(index)
 
-    const btn = document.querySelectorAll('.active-alarme')
+const container = document.querySelector('.hours')
 
-let arr = Array.from(btn)
+container.addEventListener('click', function(event) {
 
-console.log(arr)
+    const circleBtn = event.target
+    const boxCircleBtn = event.target.parentElement
 
-}
+    if (event.target && event.target.classList.contains('circle')) {
+        circleBtn.classList.toggle('ativar')
+        boxCircleBtn.classList.toggle('ativar-background')
+    }
+  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 getInfos()
